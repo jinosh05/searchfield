@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:material_ui/material_ui.dart';
 
 class SearchInputDecoration extends InputDecoration {
   /// text capitalization defaults to [TextCapitalization.none]
@@ -72,6 +72,8 @@ class SearchInputDecoration extends InputDecoration {
     this.cursorRadius,
     this.keyboardAppearance,
     super.border,
+    super.labelTextDirection,
+    super.supportingTextPadding,
     super.prefixIconConstraints,
     super.hintMaxLines,
     super.floatingLabelStyle,
@@ -187,6 +189,7 @@ class SearchInputDecoration extends InputDecoration {
     Widget? label,
     TextStyle? labelStyle,
     String? labelText,
+    TextDirection? labelTextDirection,
     bool? maintainHintHeight,
     Widget? prefix,
     Widget? prefixIcon,
@@ -205,8 +208,10 @@ class SearchInputDecoration extends InputDecoration {
     bool? maintainLabelSize,
     VisualDensity? visualDensity,
     SemanticsService? semanticsService,
+    EdgeInsetsGeometry? supportingTextPadding,
   }) {
     return SearchInputDecoration(
+      // ignore: deprecated_member_use
       maintainHintHeight: maintainHintHeight ?? this.maintainHintHeight,
       maintainHintSize: maintainHintSize ?? this.maintainHintSize,
       maintainLabelSize: maintainLabelSize ?? this.maintainLabelSize,
@@ -219,6 +224,7 @@ class SearchInputDecoration extends InputDecoration {
           suffixIconConstraints ?? this.suffixIconConstraints,
       hintMaxLines: hintMaxLines ?? this.hintMaxLines,
       floatingLabelStyle: floatingLabelStyle ?? this.floatingLabelStyle,
+      labelTextDirection: labelTextDirection ?? this.labelTextDirection,
       errorText: errorText ?? this.errorText,
       error: error ?? this.error,
       hintTextDirection: hintTextDirection ?? this.hintTextDirection,
@@ -277,6 +283,7 @@ class SearchInputDecoration extends InputDecoration {
       suffixIconColor: suffixIconColor ?? this.suffixIconColor,
       suffixStyle: suffixStyle ?? this.suffixStyle,
       suffixText: suffixText ?? this.suffixText,
+      supportingTextPadding: supportingTextPadding ?? this.supportingTextPadding,
     );
   }
 }

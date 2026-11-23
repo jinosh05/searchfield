@@ -4,6 +4,8 @@ analyzer:
   errors:
     todo: info
     include_file_not_found: ignore
+  exclude:
+    - build/**
 linter:
   rules:
     - avoid_function_literals_in_foreach_calls

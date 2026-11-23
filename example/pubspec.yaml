@@ -13,12 +13,13 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
 
-dev_dependencies:
+  material_ui: any
   searchfield:
     path: ../
+
+dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
   uses-material-design: true
-
